@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Resturant Details</h1>
+
+  <form method="POST">
+    {% csrf_token %}
+    <label for="name"> Resturant Name:</label>
+    <input type="text" id="name" name="name"><br/><br/>
+
+    <label for="address"> Address:</label>
+    <input type="text" id="address" name="address"><br/><br/>
+
+    <label for="location"> Location:</label><br/>
+    <label for="latitude"> Latitude:</label>
+    <input type="number" id="latitude" name="latitude">
+    <label for="longitude"> Longitude:</label>
+    <input type="number" id="longitude" name="longitude"><br/><br/>
+
+    <label for="opening_time"> Opening Time:</label>
+    <input type="time" id="opening_time" name="opening_time"><br/><br/>
+
+    <label for="closing_time"> Closing Time:</label>
+    <input type="time" id="closing_time" name="closing_time"><br/><br/>
+
+    <label for="bill_limit"> Bill Limit:</label>
+    <input type="number" id="bill_limit" name="bill_limit"><br/><br/>
+
+    <input type="submit" value="Edit">
+  </form>
+  
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h3>Owner name:{{name}}</h3>
+    {% if resturant %}
+      <h3>Resturant name:{{resturant.name}}</h3>
+      <h3>Address:{{resturant.address}}</h3>
+      <h3>Latitude :{{resturant.latitude}}</h3>
+      <h3>Longitude :{{resturant.longitude}}</h3>
+      <h3>Opening Time:{{resturant.opening_time}}</h3>
+      <h3>Closing Time:{{resturant.closing_time}}</h3>
+      <h3>Bill Limit:{{resturant.bill_limit}}</h3>
+    {% endif%}
+  </div>
+  <button><a href="resturant_details/{{id}}">Edit resturant Details</a></button>
+  <button><a href="add_dish/{{id}}">Add dish</a></button>
+
+  <div>
+    <h2>Menu</h2>
+    {% if dishes %}
+      <ul>
+        {% for dish in dishes %}
+        <li> Name:{{dish.name}}, Price:{{dish.price}} 
+          <button><a href="edit_dish/{{dish.id}}">Edit</a></button>
+          <button><a href="remove_dish/{{dish.id}}">Remove</a></button>
+        </li>
+        {% endfor %}
+      </ul>
+
+    {% endif %}
+  </div>
+</body>
+</html>
